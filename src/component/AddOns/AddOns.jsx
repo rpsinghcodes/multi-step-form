@@ -62,14 +62,14 @@ export default function AddOns({ onNext, onBack, data, updateData }) {
                 <p className="text-pastelBlue">Add-ons help enhance your gaming experience.</p>
             </div>
 
-            <div className="flex flex-col gap-3 justify-around">
+            <div className="flex  flex-col gap-3 justify-around">
                 {addOnsData.map(item => (
                     <button
                         key={item.title}
                         onClick={() => handlePlan(item.title, item.price)}
-                        className={`flex justify-between items-center px-4 py-4 rounded-md border ${data.addOns.some(addOn => addOn.title === item.title) ? "border-marineBlue bg-magnolia" : ""}`}
+                        className={`flex  justify-between items-center px-4 py-4 rounded-md border ${data.addOns.some(addOn => addOn.title === item.title) ? "border-marineBlue bg-magnolia" : ""}`}
                     >
-                        <div className="flex items-center gap-4">
+                        <div className="flex  items-center gap-4 ">
                             <input
                                 type="checkbox"
                                 name={item.title.toLowerCase().replace(" ", "-")}

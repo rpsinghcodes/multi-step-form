@@ -15,6 +15,9 @@ module.exports = {
         "alabaster":"hsl(231, 100%, 99%)",
         "customWhite":"hsl(0, 0%, 100%)"
       },
+      screens: {
+        'mobile': {"max": "376px"}
+      },
       fontFamily:{
         "ubuntu":["Ubuntu", "sans-serif"]
       }

@@ -2,11 +2,6 @@ import { useState } from "react"
 
 export default function PersonalInfo({onNext, data, updateData}) {
     const errorfield = <span className="float-right font-medium text-strawberryRed">This field is required </span>
-    // const [data, setData] = useState({
-    //     name:"",
-    //     email:"",
-    //     phone:"",
-    // })
     const [err, setErr] = useState({
         nameError:false,
         emailError:false,
@@ -41,7 +36,7 @@ export default function PersonalInfo({onNext, data, updateData}) {
         }
     }
     return (
-        <div className="flex  flex-col p-10 gap-10 ">
+        <div className="flex  flex-col p-10 gap-10 mobile:bg-white  mobile:rounded-lg mobile:w-[90%] mobile:mx-auto ">
             <div>
                 <h1 className="text-3xl text-marineBlue font-bold">Personal info</h1>
                 <p className="text-pastelBlue">Please provide your name, email address, and phone number.</p>
@@ -68,7 +63,7 @@ export default function PersonalInfo({onNext, data, updateData}) {
                 <input type="number" onChange={handleChange} defaultValue={data.phone} name="phone" className="w-full border [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border-pastelBlue py-2 px-3 rounded-md" placeholder="e.g +1234 567 890" />
                 </div>
             </form>
-            <button className="self-end justify-self-end  bg-marineBlue text-white py-3 px-6 rounded-md" onClick={handleNext}>Next Step</button>
+            <button className="self-end justify-self-end mobile:hidden  bg-marineBlue text-white py-3 px-6 rounded-md" onClick={handleNext}>Next Step</button>
             {/* <Navigation section={0} handleNext={handleNext}  />  */}
         </div>
     )

@@ -17,7 +17,7 @@ export default function SelectPlan({ onNext, onBack, data, updateData }) {
         }));
     }
     return (
-        <div className="p-6 flex flex-col gap-8">
+        <div className="p-6 flex flex-col gap-8 mobile:w-[90%] mobile:bg-customWhite mobile:mx-auto mobile:rounded-lg">
             <div>
                 <h1 className="text-3xl text-marineBlue font-bold">Select your plan</h1>
                 <p className="text-pastelBlue">
@@ -26,10 +26,10 @@ export default function SelectPlan({ onNext, onBack, data, updateData }) {
             </div>
 
             {/* Select plans */}
-            <div className="flex gap-3 justify-around">
+            <div className="flex mobile:flex-col gap-3 justify-around">
                 <button
                     onClick={() => handlePlan("Arcade", 9)}
-                    className={`flex flex-col gap-10  pl-4 pr-16 py-4 rounded-md content-start  border ${data.plan.name === "Arcade" && "border-marineBlue  bg-magnolia"
+                    className={`flex flex-col mobile:flex-row gap-10  pl-4 pr-16 py-4 rounded-md content-start  border ${data.plan.name === "Arcade" && "border-marineBlue  bg-magnolia"
                         } `}
                 >
                     <img src="images/icon-arcade.svg" alt="Arcade" />
@@ -47,7 +47,7 @@ export default function SelectPlan({ onNext, onBack, data, updateData }) {
                 </button>
                 <button
                     onClick={() => handlePlan("Advanced", 12)}
-                    className={`flex flex-col gap-10  pl-4 pr-16 py-4 rounded-md content-start  border  ${data.plan.name === "Advanced" && "border-marineBlue  bg-magnolia"
+                    className={`flex flex-col mobile:flex-row gap-10  pl-4 pr-16 py-4 rounded-md content-start  border  ${data.plan.name === "Advanced" && "border-marineBlue  bg-magnolia"
                         } `}
                 >
                     <img src="images/icon-advanced.svg" alt="Arcade" />
@@ -65,7 +65,7 @@ export default function SelectPlan({ onNext, onBack, data, updateData }) {
                 </button>
                 <button
                     onClick={() => handlePlan("Pro", 15)}
-                    className={`flex flex-col gap-10  pl-4 pr-16 py-4 rounded-md content-start  border ${data.plan.name === "Pro" && "border-marineBlue  bg-magnolia"
+                    className={`flex flex-col mobile:flex-row gap-10  pl-4 pr-16 py-4 rounded-md content-start  border ${data.plan.name === "Pro" && "border-marineBlue  bg-magnolia"
                         } `}
                 >
                     <img src="images/icon-pro.svg" alt="Arcade" />
@@ -114,7 +114,7 @@ export default function SelectPlan({ onNext, onBack, data, updateData }) {
                     Yearly
                 </span>
             </div>
-            <div className="flex  justify-between items-center mt-[70px]">
+            <div className="flex mobile:hidden justify-between items-center mt-[70px]">
                 <a href="#sdf" className="text-coolGray" onClick={onBack}>
                     Go Back
                 </a>

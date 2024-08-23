@@ -56,7 +56,7 @@ export default function AddOns({ onNext, onBack, data, updateData }) {
     }
 
     return (
-        <div className="p-6 flex flex-col gap-8 w-1/2">
+        <div className="p-6 flex flex-col gap-8 w-1/2 mobile:w-[90%] mobile:mx-auto mobile:bg-customWhite mobile:rounded-lg">
             <div>
                 <h1 className="text-3xl text-marineBlue font-bold">Pick add-ons</h1>
                 <p className="text-pastelBlue">Add-ons help enhance your gaming experience.</p>
@@ -87,9 +87,9 @@ export default function AddOns({ onNext, onBack, data, updateData }) {
                 ))}
             </div>
 
-            <div className="flex justify-between mt-20">
+            <div className="flex justify-between mt-20 mobile:hidden">
                 <a href="#back" className="text-coolGray" onClick={onBack}>Go Back</a>
-                <button className="px-6 py-2 bg-marineBlue text-white rounded-md" onClick={handleNext}>Next Step</button>
+                <button className="px-6 py-2 bg-marineBlue text-white rounded-md " onClick={handleNext}>Next Step</button>
             </div>
         </div>
     );

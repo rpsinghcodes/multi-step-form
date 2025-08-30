@@ -19,16 +19,16 @@ export default function FinishingUp({ onBack, onNext, data }) {
     return (
         <div className="p-6 flex flex-col gap-8 w-[50%] mobile:w-[90%]  mobile:mx-auto mobile:bg-customWhite mobile:rounded-lg">
             <div>
-                <h1 className="text-3xl text-marineBlue font-bold">Finishing up</h1>
-                <p className="text-pastelBlue">Double-check everything looks OK before confirming.</p>
+                <h1 className="text-3xl text-cool font-bold">Finishing up</h1>
+                <p className="text-coolGray">Double-check everything looks OK before confirming.</p>
             </div>
-            <div className=" bg-alabaster rounded-md p-4 text-coolGray">
+            <div className=" bg-lightGray rounded-md p-4 text-coolGray">
                 <div className="flex justify-between">
                     <div>
                         <h1 className="text-marineBlue font-bold">{data.plan.name}({data.subscription})</h1>
-                        <span> <a href="#sdf" onClick={handleChange} className=" underline ">Change</a></span>
+                        <span> <a href="#sdf" onClick={handleChange} className=" underline hover:text-purplishBlue transition-all ">Change</a></span>
                     </div>
-                    <span className="text-marineBlue font-bold">{`${data.plan.price}/${data.subscription === 'Monthly' ? 'mo' : 'yr'}`}</span>
+                    <span className="text-marineBlue font-bold">${`${data.plan.price}/${data.subscription === 'Monthly' ? 'mo' : 'yr'}`}</span>
                 </div>
                 <hr className="my-4 bg-lightGray h-[2px] rounded-md" />
                 {data.addOns.map(item => <div key={item.title} className="flex justify-between ">

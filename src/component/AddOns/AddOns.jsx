@@ -22,7 +22,6 @@ export default function AddOns({ onNext, onBack, data, updateData }) {
     };
 
     function handlePlan(plan, price) {
-        console.log('plan: ', plan, ' price: ', price);
         // if plan is yearly 
         if(data.subscription === 'Yearly') {
             price *= 10;
